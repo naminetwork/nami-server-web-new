@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  nami-website:
+    build: .
+    container_name: nami_website
+    ports:
+      - "3000:3000"  # ホストのポート3000をコンテナの3000に転送
+    restart: always  # 自動再起動（サーバー再起動時やクラッシュ時）
+    environment:
+      - NODE_ENV=development
+    volumes:
+      - ./:/app      # ホストのファイルをマウント（変更を即座に反映したい場合）
+      # 本番運用の場合はvolumesを削除してCOPYのみに依存するのもありですが、
+      # Mintlifyはホットリロードが主機能なのでマウントしておくと便利です。

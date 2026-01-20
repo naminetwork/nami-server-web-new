@@ -1,0 +1,108 @@
+{
+    "name": "Nami Network",
+    "logo": {
+        "light": "/logo.png",
+        "dark": "/logo.png",
+        "href": "/"
+    },
+    "favicon": "/logo.png",
+    "colors": {
+        "primary": "#0EA5E9",
+        "light": "#38BDF8",
+        "dark": "#0369A1",
+        "background": {
+            "light": "#F0F8FF",
+            "dark": "#020617"
+        }
+    },
+    "stylesheets": [
+        "global.css"
+    ],
+    "scripts": [
+        "global.js"
+    ],
+    "topbarLinks": [
+        {
+            "name": "ホーム",
+            "url": "/"
+        },
+        {
+            "name": "お知らせ",
+            "url": "https://discord.gg/cd33Z4ts3U"
+        },
+        {
+            "name": "ルール",
+            "url": "/rules/terms"
+        },
+        {
+            "name": "Wiki",
+            "url": "/wiki/getting-started"
+        },
+        {
+            "name": "マップ",
+            "url": "https://earthmap.naminetwork.jp/"
+        },
+        {
+            "name": "ステータス",
+            "url": "https://status.naminetwork.net"
+        },
+        {
+            "name": "Discord",
+            "url": "https://discord.gg/cd33Z4ts3U"
+        }
+    ],
+    "navigation": [
+        {
+            "group": "ルール",
+            "icon": "gavel",
+            "pages": [
+                "rules/terms",
+                "rules/nation",
+                "rules/earth",
+                "rules/mapart"
+            ]
+        },
+        {
+            "group": "Wiki - 基本ガイド",
+            "icon": "magnifying-glass",
+            "pages": [
+                "wiki/getting-started",
+                "wiki/commands",
+                "wiki/playerguard",
+                "wiki/bolt",
+                "wiki/hopper-filter"
+            ]
+        },
+        {
+            "group": "Wiki - 国家システム",
+            "icon": "swords",
+            "pages": [
+                "wiki/towny",
+                "wiki/siegewar",
+                "wiki/namiearth",
+                "wiki/quarters"
+            ]
+        },
+        {
+            "group": "Wiki - アイテム・醸造",
+            "icon": "flask",
+            "pages": [
+                "wiki/brewery",
+                "wiki/potions"
+            ]
+        },
+        {
+            "group": "Wiki - ミニゲーム",
+            "icon": "gamepad",
+            "pages": [
+                "wiki/chicken-bomber",
+                "wiki/magical-sheep"
+            ]
+        }
+    ],
+    "footer": {
+        "socials": {
+            "discord": "https://discord.gg/cd33Z4ts3U"
+        }
+    }
+}
