@@ -1,9 +1,6 @@
 # Mintlify
 .mintlify
 
-# Build scripts
-.scripts/
-
 # Auto-generated search index
 /public/search-index.json
 /search-index.json
