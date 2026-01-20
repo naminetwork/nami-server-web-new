@@ -241,12 +241,13 @@ function injectSearchButton() {
 
     const btn = document.createElement('button');
     btn.id = 'custom-search-trigger';
-    btn.className = 'flex items-center gap-2 p-2 px-4 bg-slate-100 dark:bg-slate-800 rounded-xl border border-slate-200 dark:border-slate-700 text-slate-500 hover:text-sky-500 dark:hover:text-sky-400 transition-all text-sm font-black ml-4 shadow-sm';
+    // Mobile: circular icon button, Desktop: expanded with text
+    btn.className = 'flex items-center justify-center w-10 h-10 sm:w-auto sm:h-auto sm:gap-2 sm:px-4 sm:py-2 p-2 bg-slate-100 dark:bg-slate-800 rounded-full sm:rounded-xl border border-slate-200 dark:border-slate-700 text-slate-500 hover:text-sky-500 dark:hover:text-sky-400 transition-all text-sm font-black shadow-sm';
     btn.style.cssText = 'display: flex !important; visibility: visible !important; opacity: 1 !important; z-index: 9999 !important; pointer-events: auto !important;';
     btn.innerHTML = `
-        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
-        <span class="hidden sm:inline">検索...</span>
-        <kbd class="hidden md:inline-flex ml-2 px-1.5 py-0.5 bg-white dark:bg-slate-900 rounded border border-slate-200 dark:border-slate-700 text-[10px] opacity-60">/</kbd>
+        <svg class="w-5 h-5 sm:w-4 sm:h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+        <span class="hidden sm:inline whitespace-nowrap">検索</span>
+        <kbd class="hidden lg:inline-flex px-1.5 py-0.5 bg-white dark:bg-slate-900 rounded border border-slate-200 dark:border-slate-700 text-[10px] opacity-60">/</kbd>
     `;
 
     btn.onclick = (e) => {
