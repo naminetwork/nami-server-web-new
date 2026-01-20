@@ -135,6 +135,38 @@ header {
     animation: float 6s ease-in-out infinite;
 }
 
+/* Hide default Mintlify Search contents, but keep the container for injection */
+#search-bar-entry>*:not(#custom-search-trigger),
+.SearchInput,
+.SearchBarEntryMobile,
+[aria-label="Search"],
+.Search-button,
+.Search-trigger,
+button[type="button"]:has(svg):not(#custom-search-trigger),
+#navbar button:has(svg):not(#custom-search-trigger) {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* Custom Search Modal Styles */
+#custom-search-modal {
+    z-index: 10000;
+}
+
+#custom-search-results .search-item:hover {
+    background-color: rgba(14, 165, 233, 0.1);
+}
+
+.dark #custom-search-results .search-item:hover {
+    background-color: rgba(14, 165, 233, 0.2);
+}
+
 .animate-float-delayed {
     animation: float 6s ease-in-out 3s infinite;
 }

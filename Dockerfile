@@ -10,6 +10,9 @@ RUN npm install -g mintlify pm2
 # プロジェクトのファイルをコピー
 COPY . .
 
+# 検索インデックスを生成
+RUN node generate-search-index.js
+
 # 環境変数を本番用に設定
 ENV NODE_ENV=production
 
