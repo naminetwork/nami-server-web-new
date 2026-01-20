@@ -1,0 +1,22 @@
+{
+  "title": "Wiki",
+  "pages": [
+    "---基本ガイド---",
+    "getting-started",
+    "commands",
+    "playerguard",
+    "bolt",
+    "hopper-filter",
+    "---国家システム---",
+    "towny",
+    "siegewar",
+    "namiearth",
+    "quarters",
+    "---アイテム・醸造---",
+    "brewery",
+    "potions",
+    "---ミニゲーム---",
+    "chicken-bomber",
+    "magical-sheep"
+  ]
+}
