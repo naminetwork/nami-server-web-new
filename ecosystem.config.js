@@ -5,7 +5,7 @@ module.exports = {
         args: "mintlify dev --port 3000",
         interpreter: "none", // npx is an executable, not a node script
         env: {
-            NODE_ENV: "development",
+            NODE_ENV: "production",
         }
     }]
 };

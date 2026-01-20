@@ -4,17 +4,17 @@ FROM node:lts-alpine
 # 作業ディレクトリを設定
 WORKDIR /app
 
-# Mintlify CLIをインストール
-RUN npm install -g mintlify
+# Mintlify CLIとPM2をインストール
+RUN npm install -g mintlify pm2
 
 # プロジェクトのファイルをコピー
 COPY . .
 
+# 環境変数を本番用に設定
+ENV NODE_ENV=production
+
 # ポート3000を公開
 EXPOSE 3000
 
-# コンテナ起動時に開発サーバーを実行
-# 外部からのアクセスを許可するために意図的に0.0.0.0でリッスンさせる必要がありますが
-# mintlify devコマンドがデフォルトでlocalhostのみの場合、プロキシが必要になる可能性があります。
-# 通常のコンテナ環境ではこれで動作することを想定しています。
-CMD ["mintlify", "dev", "--port", "3000"]
+# PM2を使用して管理（本番環境での安定性向上のため）
+CMD ["pm2-runtime", "ecosystem.config.js"]
