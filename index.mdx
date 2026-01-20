@@ -1,4 +1,5 @@
 ---
+title: "ホーム"
 description: "24時間誰でも参加可能"
 mode: "custom"
 ---
@@ -31,39 +32,17 @@ mode: "custom"
         <div className="absolute inset-0 bg-gradient-to-b from-cyan-400/20 to-blue-500/20 rounded-[3rem] blur-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
         <div className="relative flex flex-col items-center gap-4">
             
-            {/* Address Button (Top) */}
-            <button 
-                id="copy-btn"
-                onClick={() => {
-                    if (window.copyToClipboard) {
-                        window.copyToClipboard('copy-btn', 'nami.mcsv.win');
-                    } else {
-                        navigator.clipboard.writeText('nami.mcsv.win');
-                        alert('コピーしました！');
-                    }
-                }}
-                className="w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl rounded-full py-4 px-8 flex items-center justify-between gap-6 shadow-xl border border-white/50 dark:border-slate-700/50 hover:scale-[1.02] active:scale-95 transition-all cursor-pointer group/btn"
-            >
-                <div className="text-left flex-1 relative">
-                     <div className="absolute -top-4 left-0 h-4 overflow-hidden w-full pointer-events-none">
-                         <div id="copied-hint" className="text-[10px] font-bold text-emerald-500 opacity-0 translate-y-2 transition-all duration-300 transform">COPIED!</div>
-                     </div>
-                     <div id="copy-hint" className="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-widest mb-1 flex items-center gap-2 transition-all duration-300">
-                        <span className="w-2 h-2 rounded-full bg-cyan-500 animate-pulse"></span>
+            {/* Static Address Display */}
+            <div className="w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl rounded-full py-6 px-10 flex items-center justify-center border border-white/50 dark:border-slate-700/50 shadow-xl">
+                <div className="text-center">
+                     <div className="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-widest mb-1 flex items-center justify-center gap-2">
+                        <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                         Java版 / 統合版 IP
                      </div>
-                     <div className="text-3xl font-black text-slate-800 dark:text-slate-100 font-heading tracking-tight group-hover/btn:text-cyan-600 transition-colors">nami.mcsv.win</div>
+                     <div className="text-4xl font-black text-slate-800 dark:text-slate-100 font-heading tracking-tight">nami.mcsv.win</div>
                 </div>
-                
-                {/* Morphing Icon Container */}
-                <div id="icon-container" className="relative w-12 h-12 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-400 flex items-center justify-center transition-all duration-300 border border-transparent shadow-sm">
-                    {/* Copy Icon */}
-                    <svg id="copy-icon-svg" className="w-6 h-6 absolute transition-all duration-300 transform scale-100 opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 7v8a2 2 0 002 2h6M8 7V5a2 2 0 012-2h4.586a1 1 0 01.707.293l4.414 4.414a1 1 0 01.293.707V15a2 2 0 01-2 2h-2M8 7H6a2 2 0 01-2-2V5a2 2 0 012-2h4.586"/></svg>
-                    
-                    {/* Check Icon (Hidden by Default) */}
-                    <svg id="check-icon-svg" className="w-6 h-6 absolute transition-all duration-300 transform scale-50 opacity-0 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="3" d="M5 13l4 4L19 7"></path></svg>
-                </div>
-            </button>
+            </div>
+
 
             {/* Port & ID & Link (Bottom) */}
             <div className="flex items-center justify-center gap-3 w-full">
@@ -200,7 +179,7 @@ mode: "custom"
                             <span className="highlight" data-color="#ef4444">Chicken Bomber</span>
                         </h2>
                         <p className="text-xl text-slate-800 dark:text-slate-300 leading-relaxed font-medium mb-10">
-                            空を舞うニワトリ、はじける爆音。Chicken Bomberは究極のハチャメチャ爆走バトル。爆弾を抱えたニワトリを投げつけ合い、最後まで生き残れ！
+                            空を舞うニワトリ、はじける爆音。Chicken Bomberは究極のハチャメチャ爆走バトル. 爆弾を抱えたニワトリを投げつけ合い、最後まで生き残れ！
                         </p>
                          <a href="/wiki/chicken-bomber" className="inline-flex items-center text-lg font-bold text-orange-500 hover:text-orange-600 transition-colors group">
                              詳細を見る <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
@@ -287,5 +266,3 @@ mode: "custom"
         <p className="mt-2">Not affiliated with Mojang Studios.</p>
   </div>
 </div>
-
-

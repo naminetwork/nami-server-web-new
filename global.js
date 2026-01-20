@@ -61,62 +61,11 @@ if (document.readyState === 'loading') {
 // 30秒ごとに更新
 setInterval(updateServerStatus, 30000);
 
-// Copy to Clipboard with Smart Animation
-// Smart Morphing Copy Animation with Tactile Feedback
-window.copyToClipboard = function (btnId, text) {
-    navigator.clipboard.writeText(text).then(() => {
-        // Elements
-        const btn = document.getElementById(btnId);
-        const copyIcon = document.getElementById('copy-icon-svg');
-        const checkIcon = document.getElementById('check-icon-svg');
-        const copyHint = document.getElementById('copy-hint');
-        const copiedHint = document.getElementById('copied-hint');
-        const iconContainer = document.getElementById('icon-container');
 
-        if (!copyIcon || !checkIcon) return;
+// Copy function removed: Handled directly in index.mdx for simplicity.
 
-        // 0. Button Tactile Feedback (Scale Bump)
-        if (btn) {
-            btn.classList.add('scale-95');
-            setTimeout(() => btn.classList.remove('scale-95'), 150);
-        }
 
-        // 1. Morph Icons
-        copyIcon.classList.add('opacity-0', 'scale-50');
-        checkIcon.classList.remove('opacity-0', 'scale-50');
 
-        // 2. Animate Container Color
-        if (iconContainer) {
-            iconContainer.classList.add('bg-emerald-500', 'text-white', 'border-emerald-500', 'rotate-12', 'scale-110');
-            iconContainer.classList.remove('bg-slate-100', 'dark:bg-slate-800', 'text-slate-400', 'border-transparent');
-        }
-
-        // 3. Swap Text Hint
-        if (copyHint && copiedHint) {
-            copyHint.classList.add('translate-y-4', 'opacity-0');
-            copiedHint.classList.remove('translate-y-2', 'opacity-0');
-        }
-
-        // Revert after 2 seconds
-        setTimeout(() => {
-            // Revert Icons
-            copyIcon.classList.remove('opacity-0', 'scale-50');
-            checkIcon.classList.add('opacity-0', 'scale-50');
-
-            // Revert Container
-            if (iconContainer) {
-                iconContainer.classList.remove('bg-emerald-500', 'text-white', 'border-emerald-500', 'rotate-12', 'scale-110');
-                iconContainer.classList.add('bg-slate-100', 'dark:bg-slate-800', 'text-slate-400', 'border-transparent');
-            }
-
-            // Revert Text
-            if (copyHint && copiedHint) {
-                copyHint.classList.remove('translate-y-4', 'opacity-0');
-                copiedHint.classList.add('translate-y-2', 'opacity-0');
-            }
-        }, 2000);
-    });
-}
 
 // GSAP Loader & Animation
 function loadGSAPAnimation() {
