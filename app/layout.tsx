@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://nami.mcsv.win'),
   title: 'Nami Network',
   description: 'Nami Network Documentation',
+  icons: {
+    icon: '/favicon.png',
+  },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

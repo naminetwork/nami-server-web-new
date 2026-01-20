@@ -34,7 +34,7 @@ export default function HomePage() {
     }, []);
 
     return (
-        <div className="relative overflow-hidden w-full min-h-screen bg-[#F0F8FF] dark:bg-slate-950 font-sans text-slate-900 dark:text-slate-100">
+        <div className="relative overflow-hidden w-full min-h-screen bg-[#F0F8FF] dark:bg-[#020617] font-sans text-slate-900 dark:text-slate-200">
 
             {/* Background Patterns */}
             {/* Background Layers */}
@@ -42,27 +42,27 @@ export default function HomePage() {
             <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden bg-[#F0F8FF] dark:bg-[#020617]">
 
                 {/* mesh gradient background */}
-                <div className="absolute inset-0 opacity-40 dark:opacity-20 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-cyan-200 via-blue-100 to-transparent dark:from-cyan-900 dark:via-blue-900 dark:to-transparent"></div>
-                <div className="absolute inset-0 opacity-40 dark:opacity-20 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-indigo-200 via-slate-100 to-transparent dark:from-indigo-900 dark:via-slate-900 dark:to-transparent"></div>
+                <div className="absolute inset-0 opacity-40 dark:opacity-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-cyan-200 via-blue-100 to-transparent dark:from-cyan-900 dark:via-blue-900 dark:to-transparent"></div>
+                <div className="absolute inset-0 opacity-40 dark:opacity-10 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-indigo-200 via-slate-100 to-transparent dark:from-indigo-900 dark:via-slate-900 dark:to-transparent"></div>
 
                 {/* Animated Organic Blobs */}
-                <div className="absolute top-[-10%] left-[-10%] w-[40vw] h-[40vw] bg-cyan-400/30 dark:bg-cyan-600/20 rounded-full mix-blend-multiply filter blur-[80px] opacity-70 animate-blob"></div>
-                <div className="absolute top-[-10%] right-[-10%] w-[40vw] h-[40vw] bg-blue-400/30 dark:bg-blue-600/20 rounded-full mix-blend-multiply filter blur-[80px] opacity-70 animate-blob animation-delay-2000"></div>
-                <div className="absolute bottom-[-10%] left-[20%] w-[40vw] h-[40vw] bg-indigo-400/30 dark:bg-indigo-600/20 rounded-full mix-blend-multiply filter blur-[80px] opacity-70 animate-blob animation-delay-4000"></div>
+                <div className="absolute top-[-10%] left-[-10%] w-[40vw] h-[40vw] bg-cyan-400/30 dark:bg-cyan-600/10 rounded-full mix-blend-multiply filter blur-[80px] opacity-70 animate-blob"></div>
+                <div className="absolute top-[-10%] right-[-10%] w-[40vw] h-[40vw] bg-blue-400/30 dark:bg-blue-600/10 rounded-full mix-blend-multiply filter blur-[80px] opacity-70 animate-blob animation-delay-2000"></div>
+                <div className="absolute bottom-[-10%] left-[20%] w-[40vw] h-[40vw] bg-indigo-400/30 dark:bg-indigo-600/10 rounded-full mix-blend-multiply filter blur-[80px] opacity-70 animate-blob animation-delay-4000"></div>
 
                 {/* Grid Overlay for "Tech/Modern" feel */}
                 <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-20"></div>
 
                 {/* Vector Waves - Layer 1 (Back, Slower) */}
                 <div className="absolute bottom-0 left-0 w-[200%] h-full animate-wave-slow opacity-60">
-                    <svg viewBox="0 0 1440 320" preserveAspectRatio="none" className="absolute bottom-0 w-full h-[50vh] text-cyan-200/50 dark:text-cyan-900/30 fill-current">
+                    <svg viewBox="0 0 1440 320" preserveAspectRatio="none" className="absolute bottom-0 w-full h-[50vh] text-cyan-200/50 dark:text-cyan-900/20 fill-current">
                         <path d="M0,192L48,197.3C96,203,192,213,288,229.3C384,245,480,267,576,250.7C672,235,768,181,864,181.3C960,181,1056,235,1152,234.7C1248,235,1344,181,1392,154.7L1440,128V320H1392C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                     </svg>
                 </div>
 
                 {/* Vector Waves - Layer 2 (Front, Faster) */}
                 <div className="absolute bottom-0 left-0 w-[200%] h-full animate-wave-medium opacity-80">
-                    <svg viewBox="0 0 1440 320" preserveAspectRatio="none" className="absolute bottom-0 w-full h-[40vh] text-blue-300/50 dark:text-blue-800/30 fill-current">
+                    <svg viewBox="0 0 1440 320" preserveAspectRatio="none" className="absolute bottom-0 w-full h-[40vh] text-blue-300/50 dark:text-blue-800/20 fill-current">
                         <path d="M0,64L48,80C96,96,192,128,288,128C384,128,480,96,576,90.7C672,85,768,107,864,128C960,149,1056,171,1152,165.3C1248,160,1344,128,1392,112L1440,96V320H1392C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                     </svg>
                 </div>
@@ -72,11 +72,11 @@ export default function HomePage() {
             <div className="relative z-10 pt-32 pb-20 px-6 text-center">
 
                 {/* Decorative Ocean Orbs */}
-                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[800px] bg-gradient-to-tr from-cyan-300/30 to-blue-400/30 dark:bg-cyan-900/10 rounded-full blur-[130px] pointer-events-none -z-10 animate-pulse"></div>
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[1000px] h-[800px] bg-gradient-to-tr from-cyan-300/30 to-blue-400/30 dark:bg-cyan-900/5 rounded-full blur-[130px] pointer-events-none -z-10"></div>
 
-                <div className="absolute top-0 left-10 w-[500px] h-[500px] bg-blue-300/30 dark:bg-blue-800/10 rounded-full blur-[100px] pointer-events-none -z-10 animate-float" style={{ animationDuration: '15s' }}></div>
+                <div className="absolute top-0 left-10 w-[500px] h-[500px] bg-blue-300/30 dark:bg-blue-800/5 rounded-full blur-[100px] pointer-events-none -z-10 animate-float" style={{ animationDuration: '15s' }}></div>
 
-                <div className="absolute bottom-0 right-10 w-[600px] h-[600px] bg-cyan-200/40 dark:bg-cyan-800/10 rounded-full blur-[110px] pointer-events-none -z-10 animate-float" style={{ animationDuration: '18s', animationDelay: '2s' }}></div>
+                <div className="absolute bottom-0 right-10 w-[600px] h-[600px] bg-cyan-200/40 dark:bg-cyan-800/5 rounded-full blur-[110px] pointer-events-none -z-10 animate-float" style={{ animationDuration: '18s', animationDelay: '2s' }}></div>
 
                 <div className="animate-float">
                     <h1
@@ -102,23 +102,23 @@ export default function HomePage() {
                     <div className="relative flex flex-col items-center gap-4">
 
                         {/* Static Address Display */}
-                        <div className="w-full bg-white/90 dark:bg-slate-900/90 backdrop-blur-xl rounded-full py-6 px-10 flex items-center justify-center border border-white/50 dark:border-slate-700/50 shadow-xl">
+                        <div className="w-full bg-white/90 dark:bg-slate-900/40 backdrop-blur-xl rounded-full py-6 px-10 flex items-center justify-center border border-white/50 dark:border-white/5 shadow-xl">
                             <div className="text-center">
                                 <div className="text-[10px] text-slate-500 dark:text-slate-400 font-bold uppercase tracking-widest mb-1 flex items-center justify-center gap-2">
                                     <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
                                     Java版 / 統合版 IP
                                 </div>
-                                <div className="text-4xl font-black text-slate-800 dark:text-slate-100 font-heading tracking-tight">nami.mcsv.win</div>
+                                <div className="text-3xl md:text-4xl font-black text-slate-800 dark:text-slate-100 font-heading tracking-tight select-all">Play.NamiNetwork.jp</div>
                             </div>
                         </div>
 
                         {/* Port & ID & Link (Bottom) */}
                         <div className="flex items-center justify-center gap-3 w-full">
-                            <div className="flex-1 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md rounded-2xl py-2 px-3 text-center border border-white/40 dark:border-slate-700/40">
+                            <div className="flex-1 bg-white/60 dark:bg-slate-900/40 backdrop-blur-md rounded-2xl py-2 px-3 text-center border border-white/40 dark:border-white/5">
                                 <div className="text-[9px] text-slate-500 dark:text-slate-400 font-bold uppercase">統合版ポート</div>
                                 <div className="text-2xl font-black text-slate-700 dark:text-slate-200">3128</div>
                             </div>
-                            <div className="flex-1 bg-white/60 dark:bg-slate-900/60 backdrop-blur-md rounded-2xl py-2 px-3 text-center border border-white/40 dark:border-slate-700/40">
+                            <div className="flex-1 bg-white/60 dark:bg-slate-900/40 backdrop-blur-md rounded-2xl py-2 px-3 text-center border border-white/40 dark:border-white/5">
                                 <div className="text-[9px] text-slate-500 dark:text-slate-400 font-bold uppercase">フレンド参加</div>
                                 <div className="text-xl font-black text-slate-700 dark:text-slate-200">nami79156</div>
                             </div>
@@ -133,13 +133,13 @@ export default function HomePage() {
 
             {/* Wave Separator 1 */}
             <div className="w-full relative z-10 -mt-2">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full text-white dark:text-slate-950 fill-current translate-y-[1px]">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320" className="w-full text-white dark:text-[#020617] fill-current translate-y-[1px]">
                     <path fillOpacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,112C672,96,768,96,864,112C960,128,1056,160,1152,160C1248,160,1344,128,1392,112L1440,96L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
                 </svg>
             </div>
 
             {/* Content Section */}
-            <div className="bg-white dark:bg-slate-950 relative z-20 pb-40">
+            <div className="bg-white dark:bg-[#020617] relative z-20 pb-40">
 
                 {/* Floating Cards */}
                 <div className="px-6 pb-32 -mt-12 sm:-mt-20 relative z-30">
@@ -282,7 +282,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Status Section At Bottom with Stats */}
-                <div className="px-6 py-20 bg-white dark:bg-slate-950">
+                <div className="px-6 py-20 bg-white dark:bg-[#020617]">
                     <div className="max-w-2xl mx-auto bg-white dark:bg-slate-900/50 rounded-[3rem] p-12 shadow-xl border-2 border-slate-100 dark:border-slate-800 relative overflow-hidden">
 
                         {/* Status Indicator (Top Right) */}
@@ -330,7 +330,7 @@ export default function HomePage() {
             </div>
 
             {/* Footer Section */}
-            <div className="relative z-10 bg-white dark:bg-slate-950 border-t border-slate-100 dark:border-slate-800 py-12 text-center text-slate-400 dark:text-slate-500 text-sm font-medium">
+            <div className="relative z-10 bg-white dark:bg-[#020617] border-t border-slate-100 dark:border-slate-800 py-12 text-center text-slate-400 dark:text-slate-500 text-sm font-medium">
                 <p>&copy; 2026 Nami Network. All rights reserved.</p>
                 <p className="mt-2">Not affiliated with Mojang Studios.</p>
             </div>

@@ -9,7 +9,7 @@ export const baseOptions: BaseLayoutProps = {
         src="/logo.png"
         width={128}
         height={32}
-        className="w-auto h-[32px] object-contain"
+        className="w-auto h-[32px] object-contain rounded-xl"
         priority
       />
     ),
