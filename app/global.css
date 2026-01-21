@@ -1,103 +1,50 @@
-/* Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap');
-
 @import 'tailwindcss';
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
 
-:root {
-    --font-sans: 'Zen Kaku Gothic New', 'Inter', sans-serif;
-    --font-heading: 'Zen Kaku Gothic New', 'Inter', sans-serif;
-}
-
+/* Hide scrollbar for all elements while maintaining scroll functionality */
 * {
-    font-family: var(--font-sans);
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
 }
 
-/* Exclude code and mono elements from global override */
-code,
-pre,
-kbd,
-samp,
-.font-mono,
-[class*="icon-"],
-[class*="fa-"] {
-    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !important;
+*::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari and Opera */
 }
 
-body {
-    font-family: var(--font-sans) !important;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+@source "../node_modules/fumadocs-ui/dist/**/*.js";
+
+@theme {
+    /* Recruitment Theme Palette */
+    --color-cyan-50: #E0F7FA;
+    --color-cyan-100: #B2EBF2;
+    --color-cyan-400: #26C6DA;
+    --color-cyan-500: #00BCD4;
+
+    --color-green-50: #E8F5E9;
+    --color-green-100: #C8E6C9;
+    --color-green-400: #66BB6A;
+    --color-green-500: #4CAF50;
+
+    --color-red-50: #FFEBEE;
+    --color-red-100: #FFCDD2;
+    --color-red-400: #EF5350;
+    --color-red-500: #F44336;
+
+    --color-purple-50: #F3E5F5;
+    --color-purple-100: #E1BEE7;
+    --color-purple-400: #AB47BC;
+    --color-purple-500: #9C27B0;
+
+    /* Fonts */
+    --font-sans: var(--font-zen), sans-serif;
+    --font-heading: var(--font-zen), sans-serif;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    font-family: var(--font-heading) !important;
-}
-
-
-/* Wave Animation */
-.waves {
-    width: 100%;
-    height: 100%;
-}
-
-.parallax>use {
-    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
-}
-
-.parallax>use:nth-child(1) {
-    animation-delay: -2s;
-    animation-duration: 7s;
-}
-
-.parallax>use:nth-child(2) {
-    animation-delay: -3s;
-    animation-duration: 10s;
-}
-
-.parallax>use:nth-child(3) {
-    animation-delay: -4s;
-    animation-duration: 13s;
-}
-
-.parallax>use:nth-child(4) {
-    animation-delay: -5s;
-    animation-duration: 20s;
-}
-
-@keyframes move-forever {
-    0% {
-        transform: translate3d(-90px, 0, 0);
-    }
-
-    100% {
-        transform: translate3d(85px, 0, 0);
-    }
-}
-
-/* Custom Animations */
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translate3d(0, 40px, 0);
-    }
-
-    to {
-        opacity: 1;
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-.animate-fade-in-up {
-    animation: fadeInUp 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
-}
-
+/* Animations */
 @keyframes float {
 
     0%,
@@ -106,114 +53,121 @@ h6 {
     }
 
     50% {
-        transform: translateY(-10px);
+        transform: translateY(-20px);
     }
 }
 
-.animate-float {
-    animation: float 6s ease-in-out infinite;
-}
+@keyframes wiggle {
 
-/* Search feature disabled - using default Mintlify search */
-
-.animate-float-delayed {
-    animation: float 6s ease-in-out 3s infinite;
-}
-
-@keyframes swim {
-    0% {
-        transform: translateX(100vw) translateY(0);
-        opacity: 0;
-    }
-
-    10% {
-        opacity: 1;
-    }
-
-    90% {
-        opacity: 1;
-    }
-
+    0%,
     100% {
-        transform: translateX(-100vw) translateY(-20px);
-        opacity: 0;
-    }
-}
-
-.animate-swim {
-    animation: swim 20s linear infinite;
-}
-
-@keyframes bubble {
-    0% {
-        transform: translateY(100px) translateX(0) scale(0.5);
-        opacity: 0;
-    }
-
-    25% {
-        transform: translateY(50px) translateX(15px) scale(0.8);
-        opacity: 0.4;
+        transform: rotate(-3deg);
     }
 
     50% {
-        transform: translateY(0px) translateX(-15px) scale(0.9);
-        opacity: 0.4;
+        transform: rotate(3deg);
+    }
+}
+
+@keyframes pulse-slow {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
     }
 
-    75% {
-        transform: translateY(-50px) translateX(10px) scale(1.1);
-        opacity: 0.2;
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0);
     }
 
     100% {
-        transform: translateY(-100px) translateX(0) scale(1.3);
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes blob {
+    0% {
+        transform: translate(0px, 0px) scale(1);
+    }
+
+    33% {
+        transform: translate(30px, -50px) scale(1.1);
+    }
+
+    66% {
+        transform: translate(-20px, 20px) scale(0.9);
+    }
+
+    100% {
+        transform: translate(0px, 0px) scale(1);
+    }
+}
+
+.animate-blob {
+    animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+    animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+    animation-delay: 4s;
+}
+
+@keyframes fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+}
+
+.prose {
+    max-width: 100%;
+}
+
+/* Base Card Styles */
+.recruit-card {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.recruit-card:hover {
+    transform: translateY(-8px);
+}
+
+@keyframes bubble-rise {
+    0% {
+        transform: translateY(100%) scale(0.5);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(-1200px) scale(1.2);
         opacity: 0;
     }
 }
 
 .animate-bubble {
-    animation: bubble 12s infinite ease-in-out;
-}
-
-/* Force Logo Size in Mintlify Header - Might not apply to Fumadocs but kept safe */
-/* Force Logo Size removed */
-
-/* Increase general content width if constrained */
-.prose {
-    max-width: 85rem !important;
-}
-
-/* Premium Roundness Overrides */
-.Search-button {
-    border-radius: 9999px !important;
-}
-
-.rounded-xl,
-.rounded-2xl {
-    border-radius: 2rem !important;
-}
-
-.rounded-3xl {
-    border-radius: 3rem !important;
-}
-
-/* Premium Branding Classes */
-.nami-card-premium {
-    border-radius: 4rem !important;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15) !important;
-    /* Sharper shadow */
-}
-
-.nami-inner-premium {
-    border-radius: 3.5rem !important;
-    box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.05) !important;
-}
-
-.nami-pill-premium {
-    border-radius: 9999px !important;
-}
-
-.dark .nami-inner-premium {
-    background-color: #1e293b;
-    border-color: #475569;
+    animation: bubble-rise 15s linear infinite;
 }

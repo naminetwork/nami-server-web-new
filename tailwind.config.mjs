@@ -13,8 +13,8 @@ export default {
                 primary: '#0EA5E9',
             },
             fontFamily: {
-                sans: ['var(--font-sans)'],
-                heading: ['var(--font-heading)'],
+                sans: ['var(--font-zen)', 'sans-serif'],
+                heading: ['var(--font-zen)', 'sans-serif'],
             },
         },
     },
