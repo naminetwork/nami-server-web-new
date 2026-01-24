@@ -199,7 +199,7 @@ export default function HomePage() {
                             {/* Friend Code Card */}
                             <div className="flex-1 bg-white rounded-3xl shadow-[0_8px_20px_-8px_rgba(59,130,246,0.3)] flex flex-col items-center justify-center hover:-translate-y-1 transition-transform">
                                 <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">フレンド参加</span>
-                                <span className="text-2xl font-black text-[#003366]">nami79156</span>
+                                <span className="text-2xl font-black text-[#003366]">NAMINETWORK1</span>
                             </div>
                         </div>
                     </div>
