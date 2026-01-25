@@ -193,7 +193,7 @@ export default function HomePage() {
                             {/* Port Card */}
                             <div className="flex-1 bg-white rounded-3xl shadow-[0_8px_20px_-8px_rgba(59,130,246,0.3)] flex flex-col items-center justify-center hover:-translate-y-1 transition-transform">
                                 <span className="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-1">統合版ポート</span>
-                                <span className="text-3xl font-black text-[#003366]">3128</span>
+                                <span className="text-3xl font-black text-[#003366]">19132</span>
                             </div>
 
                             {/* Friend Code Card */}
