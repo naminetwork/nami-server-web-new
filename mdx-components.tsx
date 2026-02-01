@@ -3,6 +3,7 @@ import type { MDXComponents } from 'mdx/types';
 import { Callout } from 'fumadocs-ui/components/callout';
 import { Card, Cards } from 'fumadocs-ui/components/card';
 import { Accordion, Accordions } from 'fumadocs-ui/components/accordion';
+import { Tab, Tabs } from 'fumadocs-ui/components/tabs';
 import { TypeIcon as Icon } from 'lucide-react'; // Placeholder if needed
 
 export function getMDXComponents(components?: MDXComponents): MDXComponents {
@@ -38,6 +39,8 @@ export function getMDXComponents(components?: MDXComponents): MDXComponents {
     Cards: Cards,
     Accordion: Accordion,
     AccordionGroup: Accordions,
+    Tabs: Tabs,
+    Tab: Tab,
     Step: ({ children, title }: { children: React.ReactNode; title?: string }) => (
       <div className="step">
         {title && <h3 className="font-bold">{title}</h3>}
